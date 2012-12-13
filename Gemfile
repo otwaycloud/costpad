@@ -15,6 +15,15 @@ group :assets do
   gem 'pg'
 end
 
+group :development, :test do
+  gem 'sqlite3', '1.3.5'
+  gem 'rspec-rails', '2.11.0'
+end
+
+group :test do
+  gem 'capybara', '1.1.2'
+end
+
 gem 'jquery-rails'
 
 
