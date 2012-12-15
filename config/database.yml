@@ -6,7 +6,7 @@
 development:
   adapter: postgresql
   host: localhost
-  username: admin
+  username: greg
   database: costpad1
   pool: 5
   timeout: 5000
