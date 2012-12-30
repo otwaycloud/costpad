@@ -11,6 +11,7 @@ group :assets do
   gem 'coffee-rails', '~> 3.2.1'
   gem 'compass-rails'
   gem 'zurb-foundation'
+  gem 'bcrypt-ruby', '~> 3.0.0'
   gem 'uglifier', '>= 1.0.3'
   gem 'pg'
 end
@@ -23,6 +24,7 @@ group :test do
   gem 'capybara', '1.1.2'
   gem 'rspec-rails', '2.11.0'
   gem 'sqlite3'
+  gem 'factory_girl_rails', '4.1.0'
 end
 
 gem 'jquery-rails'
@@ -32,7 +34,7 @@ gem 'jquery-rails'
 
 
 # To use ActiveModel has_secure_password
-# gem 'bcrypt-ruby', '~> 3.0.0'
+# 
 
 # To use Jbuilder templates for JSON
 # gem 'jbuilder'
