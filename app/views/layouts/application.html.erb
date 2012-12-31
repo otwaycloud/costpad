@@ -25,16 +25,22 @@
 </head>
 <body>
 	<!-- Nav Bar -->
- 
+
   <div class="row">
     <div class="twelve columns">
       <ul class="nav-bar">
         <li><%= link_to "home", home_path %></li>
-        <li><%= link_to "sign up", signup_path %></li>
-        <li><a href="#">login</a></li>
         <li><%= link_to "about", about_path %></li>
-      </ul>
-
+        <li><%= link_to "sign up", signup_path %></li>
+        <% if signed_in? %>
+        <li><%= link_to "Users", '#' %></li>
+        <li><%= link_to "Profile", current_user %></li>
+        <li><%= link_to "Settings", '#' %></li>
+        <li><%= link_to "logout", signout_path, method: "delete" %></li>
+        <% else %>
+        <li><%= link_to "login", signin_path %></li>
+        <% end %>
+    </ul>
     </div>
   </div>
 
@@ -58,7 +64,6 @@
           <div class="alert alert-<%= key %>"><%= value %></div>
           <% end %>
           	<%= yield %>
-        
         </div>
 
 

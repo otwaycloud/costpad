@@ -12,7 +12,11 @@
       <h5>get started</h5>
       <ul class="side-nav">
         <li class ="secondary button"><%= link_to "sign up", signup_path %></li>
-        <li class ="secondary button"><a href="#">login</a></li>
+        <% if signed_in? %>
+        <li class ="secondary button"><%= link_to "logout", signout_path, method: "delete" %></li>
+        <% else %>
+        <li class ="secondary button"> <%= link_to "login", signin_path %></li>
+        <% end %>
       </ul>
 
 
