@@ -76,7 +76,13 @@
 
     <!-- Sidebar -->
 
-    <%= render 'layouts/sidebar_home' %>
+    <% if signed_in? %>
+      <%= render 'layouts/sidebar_user' %>
+    <% else %>
+      <%= render 'layouts/sidebar_home' %>
+    <% end %>
+
+    
 
 
     <!-- End Sidebar -->

@@ -1,0 +1,19 @@
+  <aside class="three columns">
+
+      <div class="panel">
+
+        <p>We'll be adding stuff here to help you manage your stuff.</p>
+        
+      </div>
+
+      <ul class="side-nav">
+        
+        <% if signed_in? %>
+        <li class ="secondary button"><%= link_to "logout", signout_path, method: "delete" %></li>
+        <% else %>
+        <li class ="secondary button"> <%= link_to "login", signin_path %></li>
+        <% end %>
+      </ul>
+
+
+    </aside>
