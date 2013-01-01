@@ -1,4 +1,6 @@
 Costpad::Application.routes.draw do
+  resources :items
+
   resources :users
   resources :sessions, only: [:new, :create, :destroy]
 

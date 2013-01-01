@@ -1,0 +1,40 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Title:</b>
+  <%= @item.title %>
+</p>
+
+<p>
+  <b>Category:</b>
+  <%= @item.category %>
+</p>
+
+<p>
+  <b>Unit:</b>
+  <%= @item.unit %>
+</p>
+
+<p>
+  <b>Supply price:</b>
+  <%= @item.supply_price %>
+</p>
+
+<p>
+  <b>Labour price:</b>
+  <%= @item.labour_price %>
+</p>
+
+<p>
+  <b>Margin:</b>
+  <%= @item.margin %>
+</p>
+
+<p>
+  <b>Sum price:</b>
+  <%= @item.sum_price %>
+</p>
+
+
+<%= link_to 'Edit', edit_item_path(@item) %> |
+<%= link_to 'Back', items_path %>
